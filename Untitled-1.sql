@@ -13,6 +13,8 @@ t1 as
 (select * from t where demo__vital_status = "Dead" and disease_type = "Myeloid Leukemias")
 select demo__gender,count(*) from t1 group by demo__gender;
 
+
+
 #average documented Myeloid Leukemias death age
 with t as
 (select demo__age_at_index,disease_type,demo__vital_status from `isb-cgc-bq.BEATAML1_0.clinical_gdc_current`
